@@ -1,0 +1,140 @@
+/* ==========================================================================
+   EPL Matchday Gate - Egyptian Premier League Ticketing Platform Styles
+   تذكرتي دوري نايل - المنظومة الموحدة لحجز تذاكر الدوري المصري الممتاز
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@600;700;800;900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d131f;
+  color: #dde2f3;
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d131f;
+}
+::-webkit-scrollbar-thumb {
+  background: #242a37;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4edea3;
+}
+
+/* Glassmorphism Containers */
+.glass-panel {
+  background: rgba(22, 28, 40, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-elevated {
+  background: rgba(26, 34, 52, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(78, 222, 163, 0.2);
+}
+
+/* Toast Notifications */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 380px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #1a202c;
+  color: #dde2f3;
+  border-radius: 12px;
+  border: 1px solid rgba(78, 222, 163, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 14px;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-success {
+  border-color: #10b981;
+}
+.toast-warning {
+  border-color: #ffb95f;
+}
+.toast-error {
+  border-color: #ffb4ab;
+}
+
+/* Modal Backdrop */
+.modal-overlay {
+  transition: opacity 0.25s ease-in-out;
+}
+.modal-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Mobile Drawer */
+#mobile-drawer {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#mobile-drawer.closed {
+  transform: translateX(100%);
+}
+
+/* Print Styles for Digital MatchPass (Ticket Printing) */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  header, footer, nav, button, #toast-container, .no-print {
+    display: none !important;
+  }
+  #printableTicket, #printableTicket * {
+    visibility: visible;
+  }
+  #printableTicket {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: #0d131f !important;
+    color: #ffffff !important;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

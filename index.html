@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html class="dark" dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>تذكرتي دوري نايل | المنظومة الرسمية لحجز تذاكر الدوري المصري الممتاز</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@600;700;800;900&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#0d131f",
+            "surface-dim": "#0d131f",
+            "surface-bright": "#333946",
+            "surface-container-lowest": "#080e1a",
+            "surface-container-low": "#161c28",
+            "surface-container": "#1a202c",
+            "surface-container-high": "#242a37",
+            "surface-container-highest": "#2f3542",
+            "on-surface": "#dde2f3",
+            "on-surface-variant": "#bbcabf",
+            "primary": "#4edea3",
+            "primary-container": "#10b981",
+            "secondary": "#ffb95f",
+            "secondary-container": "#ee9800",
+            "tertiary": "#4cd7f6",
+            "tertiary-container": "#00b2d0",
+            "error": "#ffb4ab",
+            "error-container": "#93000a",
+            "on-error-container": "#ffdad6",
+            "outline": "#86948a",
+            "outline-variant": "#3c4a42"
+          },
+          fontFamily: {
+            headline: ["Chivo", "sans-serif"],
+            body: ["Rubik", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body text-body-md text-on-surface antialiased">
+
+  <!-- ================= TOP STATUS BAR & HEADER ================= -->
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)]">
+    <!-- Top System Strip -->
+    <div class="bg-surface-container-lowest px-4 sm:px-8 py-1.5 flex items-center justify-between text-xs border-b border-white/5">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          <span class="text-primary font-bold">حالة الضغط: مستقر</span>
+          <span class="text-outline-variant">•</span>
+          <span class="text-on-surface-variant">قاعة الانتظار: غير مفعّلة</span>
+        </div>
+        <span class="hidden lg:inline text-outline-variant">|</span>
+        <div class="hidden lg:flex items-center gap-1 text-secondary">
+          <span class="material-symbols-outlined text-sm">verified</span>
+          <span>المنظومة الرسمية المعتمدة لبطاقة المشجع المصرية</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:15355" class="hidden sm:flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-sm">support_agent</span>
+          <span>الخط الساخن: 15355</span>
+        </a>
+        <button class="lang-toggle-btn px-2.5 py-0.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-bold text-xs">EN</button>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-8">
+        <!-- Logo -->
+        <a class="flex items-center gap-3 group" href="index.html">
+          <div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center p-1.5 text-primary shadow-[0_0_12px_rgba(16,185,129,0.2)] group-hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-2xl">sports_soccer</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline font-bold text-lg tracking-tight text-on-surface">تذكرتي دوري نايل</span>
+            <span class="text-[11px] text-primary tracking-wider uppercase font-semibold">EPL Matchday Gate</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-1">
+          <a aria-current="page" class="px-3 py-2 transition-colors bg-surface-container-high text-primary font-bold rounded-lg" href="index.html">الرئيسية</a>
+          <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="fixtures.html">جدول المباريات</a>
+          <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="fan-id.html">حجز تذكرتي بالرقم القومي</a>
+          <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="booking.html">الاستادات والمقاعد</a>
+          <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="tickets.html">تذاكري المحجوزة</a>
+        </nav>
+      </div>
+
+      <!-- Header Actions -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        <!-- Search Box -->
+        <div class="hidden md:flex items-center bg-surface-container-low px-3 py-2 rounded-xl text-on-surface-variant gap-2 border border-white/5 focus-within:border-primary transition-all">
+          <span class="material-symbols-outlined text-lg text-outline">search</span>
+          <input id="header-search-input" type="text" placeholder="استعلام برقم المشجع..." class="bg-transparent text-xs text-on-surface placeholder:text-outline focus:outline-none w-36 lg:w-44"/>
+        </div>
+
+        <!-- Notification Bell & Dropdown -->
+        <div class="relative">
+          <button id="notif-btn" class="relative p-2.5 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" title="التنبيهات">
+            <span class="material-symbols-outlined text-xl">notifications</span>
+            <span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface animate-pulse"></span>
+          </button>
+          <!-- Dropdown -->
+          <div id="notif-dropdown" class="hidden absolute left-0 mt-3 w-80 bg-surface-container-high rounded-2xl shadow-2xl border border-white/10 p-4 z-50 flex flex-col gap-3">
+            <div class="flex items-center justify-between pb-2 border-b border-white/10">
+              <span class="font-bold text-sm text-on-surface">التنبيهات العاجلة</span>
+              <span class="text-[11px] text-primary">٣ إشعارات جديدة</span>
+            </div>
+            <div class="flex flex-col gap-2.5 max-h-64 overflow-y-auto">
+              <a href="booking.html" class="p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-highest transition-colors flex items-start gap-3">
+                <span class="material-symbols-outlined text-secondary text-lg mt-0.5">local_fire_department</span>
+                <div class="flex flex-col text-xs">
+                  <span class="text-on-surface font-semibold">فتح حجز قمة الأهلي والزمالك</span>
+                  <span class="text-on-surface-variant text-[11px]">متبقي أقل من 12% من مقاعد الدرجة الثالثة</span>
+                </div>
+              </a>
+              <a href="tickets.html" class="p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-highest transition-colors flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">verified</span>
+                <div class="flex flex-col text-xs">
+                  <span class="text-on-surface font-semibold">تأكيد بطاقة المشجع Fan ID</span>
+                  <span class="text-on-surface-variant text-[11px]">تم اعتماد بياناتك لموسم 2024/2025</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Chip -->
+        <a href="fan-id.html" class="flex items-center gap-2 bg-surface-container-low p-1.5 pl-3 rounded-xl border border-white/5 hover:border-primary/40 transition-colors">
+          <img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida/AEtjO1XVtn3w-wD-HE5nbdJNwEkWuo9nKjdUwhRmdB76jdDRgt_g4VnkXrUE6ylrMCO3vPuen8ClU42IAao7Pp76-nLK5fHhZ_tNdUFrCWr_wlhGnYh0w1hFRprSOtx0DHEKNcnRKeMXzQexlRYyWRKqqfOwtUrB1DC2imcH1NKB3fgE48bYpIRJttB2KiQ0jf8Ka1bhnY4mB6srnXn_HF33qpPcDAtXybuJ3vN-X8Fb-cS3GSbE2tVYeW5nLQU"/>
+          <div class="hidden sm:flex flex-col text-right">
+            <div class="flex items-center gap-1">
+              <span class="text-xs font-bold text-on-surface">أحمد مصطفى</span>
+              <span class="material-symbols-outlined text-xs text-primary">check_circle</span>
+            </div>
+            <span class="text-[10px] text-on-surface-variant font-mono">Fan ID: #EG-92841</span>
+          </div>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" title="القائمة">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Drawer -->
+  <div id="drawer-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden"></div>
+  <aside id="mobile-drawer" class="fixed inset-y-0 right-0 w-72 bg-surface-container-low border-l border-white/10 p-6 z-50 flex flex-col justify-between closed shadow-2xl">
+    <div class="flex flex-col gap-6">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-xl">sports_soccer</span>
+          </div>
+          <span class="font-headline font-bold text-sm text-on-surface">تذكرتي دوري نايل</span>
+        </div>
+        <button id="close-drawer-btn" class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-2">
+        <a class="px-4 py-3 rounded-xl bg-surface-container-high text-primary font-bold flex items-center gap-3" href="index.html">
+          <span class="material-symbols-outlined text-lg">home</span>
+          <span>الرئيسية</span>
+        </a>
+        <a class="px-4 py-3 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-3" href="fixtures.html">
+          <span class="material-symbols-outlined text-lg">calendar_month</span>
+          <span>جدول المباريات</span>
+        </a>
+        <a class="px-4 py-3 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-3" href="fan-id.html">
+          <span class="material-symbols-outlined text-lg">badge</span>
+          <span>حجز تذكرتي بالرقم القومي</span>
+        </a>
+        <a class="px-4 py-3 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-3" href="booking.html">
+          <span class="material-symbols-outlined text-lg">stadium</span>
+          <span>الاستادات والمقاعد</span>
+        </a>
+        <a class="px-4 py-3 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-3" href="tickets.html">
+          <span class="material-symbols-outlined text-lg">confirmation_number</span>
+          <span>تذاكري المحجوزة</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="flex flex-col gap-3 pt-6 border-t border-white/10 text-xs text-on-surface-variant">
+      <div class="flex items-center gap-2 text-primary font-bold">
+        <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+        <span>الخط الساخن: 15355</span>
+      </div>
+      <span>رابطة الأندية المصرية المحترفة © 2025</span>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-280px)]">
+    <div class="flex flex-col w-full">
+
+      <!-- Real-Time Queue Alert Bar -->
+      <section class="w-full bg-surface-container-lowest px-4 sm:px-8 py-3.5 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex items-center justify-center p-1.5 rounded-lg bg-primary/10 text-primary">
+              <span class="material-symbols-outlined text-lg">speed</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-on-surface">غرفة الانتظار الذكية:</span>
+              <span class="text-on-surface-variant">أنت في بيئة حجز مؤمنة ومشفرة ضد برمجيات الحجز الآلي (Anti-Bot Active)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-1.5 text-secondary">
+              <span class="material-symbols-outlined text-base">timer</span>
+              <span class="font-semibold">متوسط زمن الحجز: 1.5 دقيقة</span>
+            </div>
+            <div class="h-4 w-px bg-surface-container-highest hidden sm:block"></div>
+            <div class="flex items-center gap-2 text-primary font-bold">
+              <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              <span>بث مباشر لمقاعد الجولة 15</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Big Match Hero: The Cairo Derby Clash -->
+      <section class="relative w-full overflow-hidden bg-surface-container-lowest px-4 sm:px-8 py-10 lg:py-16">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(16,185,129,0.15),rgba(13,19,31,0))] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 right-0 -translate-y-1/2 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10 flex flex-col gap-8">
+          <!-- Derby Top Indicators -->
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-2.5">
+              <span class="px-3 py-1 rounded-full bg-error-container text-on-error-container font-bold text-xs flex items-center gap-1.5 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                قمة الكرة المصرية • الكلاسيكو 128
+              </span>
+              <span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-xs flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm text-primary">stadium</span>
+                استاد القاهرة الدولي
+              </span>
+              <span class="hidden md:inline-flex px-3 py-1 rounded-full bg-surface-container text-tertiary text-xs">
+                الجولة الخامسة عشرة
+              </span>
+            </div>
+
+            <!-- Real-Time Capacity Badge -->
+            <div class="flex items-center gap-2 bg-surface-container px-3.5 py-1.5 rounded-full border border-white/5">
+              <span class="material-symbols-outlined text-secondary text-base">local_fire_department</span>
+              <span class="text-on-surface-variant text-xs">سعة المقاعد:</span>
+              <span class="text-secondary font-bold text-xs">متبقي 12% فقط</span>
+              <div class="w-16 h-2 bg-surface-container-highest rounded-full overflow-hidden mr-1">
+                <div class="h-full bg-secondary w-[88%] rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Visual Confrontation Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Teams Showcase (7 cols) -->
+            <div class="lg:col-span-7 flex flex-col gap-8 bg-surface-container/60 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-xl border border-white/5">
+              <div class="flex items-center justify-between text-xs text-on-surface-variant">
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base text-primary">calendar_month</span>
+                  <span>الجمعة 28 مارس 2025</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base text-tertiary">live_tv</span>
+                  <span>ON Time Sports HD 1</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base text-secondary">schedule</span>
+                  <span>08:00 مساءً بتوقيت القاهرة</span>
+                </div>
+              </div>
+
+              <!-- Crest vs Crest Arena -->
+              <div class="grid grid-cols-5 items-center gap-2 py-4">
+                <!-- Home: Al Ahly -->
+                <div class="col-span-2 flex flex-col items-center text-center gap-3">
+                  <div class="relative group">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-surface-container-high flex items-center justify-center p-3 shadow-lg transform transition-transform group-hover:scale-105 border border-white/5">
+                      <img class="w-full h-full object-contain" alt="Al Ahly SC" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsfjAcOci7-F_wbylAaAGHXiecbS1SmaN7QtVTFepvM-KDts-sntywLg55xTUbF4-Vk4EogZYh6SHLjIKWwhOKU3XuTeEq8imEsiFdQ3x7WmjIniBGK03dsrKuLEyBjCzZAimqYw4iIklTv5IfiNU0rSqHuUuvQIuRIWhodKi8dY8nStiFOAkvorLmgoqZUX2vhncJYOKMh_uYDftYaLXS5ijrkv-cglmfZa65rp1k4RCwq-IZ_dE7GA"/>
+                    </div>
+                    <span class="absolute -bottom-2 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-bold text-[10px]">صاحب الأرض</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <h3 class="font-headline font-bold text-2xl text-on-surface">الأهلي</h3>
+                    <span class="text-on-surface-variant text-xs">Al Ahly SC</span>
+                  </div>
+                </div>
+
+                <!-- VS Division -->
+                <div class="col-span-1 flex flex-col items-center justify-center gap-1">
+                  <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center font-headline font-black text-primary border border-white/10 shadow">
+                    VS
+                  </div>
+                  <span class="text-[10px] text-outline tracking-widest uppercase font-bold">ديربي القاهرة</span>
+                </div>
+
+                <!-- Away: Zamalek -->
+                <div class="col-span-2 flex flex-col items-center text-center gap-3">
+                  <div class="relative group">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-surface-container-high flex items-center justify-center p-3 shadow-lg transform transition-transform group-hover:scale-105 border border-white/5">
+                      <img class="w-full h-full object-contain" alt="Zamalek SC" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj1RR5JHGqlSR_fFerhR1ARfZfMqrCeN5J8fSnnUhE3ntRLHuHpQI_FKZ1HwDPXOvKkcxZXResmBlY3weCAGzWvMlKp7IQOa-msJIufuEat9IcGSKK_Xwj5Uwl7Mx5fxbunQM3ajRxLKWZepSuLe0fthNARfdfeZrjhk8v2xpHilNATMV_gPorZsyqc8gjuLdN9cPuQp56UG8Rna2B25tN9PTmtjxz_9qpga9hJl8mG2ieO6bulGc-ow"/>
+                    </div>
+                    <span class="absolute -bottom-2 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-bold text-[10px]">الضيف</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <h3 class="font-headline font-bold text-2xl text-on-surface">الزمالك</h3>
+                    <span class="text-on-surface-variant text-xs">Zamalek SC</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stadium Gate Advisory -->
+              <div class="bg-surface-container-lowest/80 p-4 rounded-2xl flex items-center justify-between text-xs text-on-surface-variant border border-white/5">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-xl">sensor_door</span>
+                  <span>فتح بوابات استاد القاهرة: 02:00 ظهراً (تُغلق قبل اللقاء بـ 60 دقيقة)</span>
+                </div>
+                <span class="text-primary font-bold hidden sm:inline">سعة الجماهير: 50,000 مشجع</span>
+              </div>
+            </div>
+
+            <!-- Fast Booking & Countdown Console (5 cols) -->
+            <div class="lg:col-span-5 flex flex-col gap-6 bg-surface-container-high/90 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-2xl relative overflow-hidden border border-white/10">
+              <div class="absolute -top-12 -left-12 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+              
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-base text-on-surface">العد التنازلي لانطلاق القمة</span>
+                <span class="px-2.5 py-1 rounded-full bg-surface-container text-secondary font-bold text-xs flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                  مباشر
+                </span>
+              </div>
+
+              <!-- Countdown Blocks -->
+              <div class="grid grid-cols-4 gap-2 text-center" id="matchCountdown">
+                <div class="bg-surface-container-lowest p-3 rounded-2xl flex flex-col items-center border border-white/5">
+                  <span class="font-headline font-black text-2xl text-primary" id="timerDays">02</span>
+                  <span class="text-[11px] text-outline">يـوم</span>
+                </div>
+                <div class="bg-surface-container-lowest p-3 rounded-2xl flex flex-col items-center border border-white/5">
+                  <span class="font-headline font-black text-2xl text-on-surface" id="timerHours">14</span>
+                  <span class="text-[11px] text-outline">سـاعة</span>
+                </div>
+                <div class="bg-surface-container-lowest p-3 rounded-2xl flex flex-col items-center border border-white/5">
+                  <span class="font-headline font-black text-2xl text-on-surface" id="timerMins">32</span>
+                  <span class="text-[11px] text-outline">دقيقـة</span>
+                </div>
+                <div class="bg-surface-container-lowest p-3 rounded-2xl flex flex-col items-center border border-white/5">
+                  <span class="font-headline font-black text-2xl text-secondary" id="timerSecs">10</span>
+                  <span class="text-[11px] text-outline">ثانيـة</span>
+                </div>
+              </div>
+
+              <!-- Price & Stands info -->
+              <div class="flex items-end justify-between pt-2 border-t border-white/5">
+                <div class="flex flex-col">
+                  <span class="text-on-surface-variant text-xs">أسعار التذاكر تبدأ من:</span>
+                  <div class="flex items-baseline gap-1">
+                    <span class="font-headline font-black text-3xl text-primary">75</span>
+                    <span class="text-xs text-on-surface font-bold">جنيه مصري</span>
+                  </div>
+                </div>
+                <div class="flex flex-col text-left items-end">
+                  <span class="text-on-surface-variant text-xs">المدرجات المتاحة:</span>
+                  <span class="text-on-surface text-xs font-semibold">ثالثة شمال / يمين • درجة أولى</span>
+                </div>
+              </div>
+
+              <!-- Main CTA Trigger -->
+              <div class="flex flex-col gap-3 pt-2">
+                <a class="w-full py-4 px-6 rounded-2xl bg-primary text-surface font-headline font-black text-base flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(78,222,163,0.35)] hover:bg-[#6ffbbe] transition-all duration-200 transform hover:-translate-y-0.5" href="booking.html?match=derby">
+                  <span class="material-symbols-outlined text-xl">confirmation_number</span>
+                  <span>احجز تذكرتك الآن</span>
+                  <span class="material-symbols-outlined text-lg rtl:rotate-180">arrow_forward</span>
+                </a>
+                <div class="flex items-center justify-center gap-2 text-on-surface-variant text-xs">
+                  <span class="material-symbols-outlined text-sm text-primary">badge</span>
+                  <span>يلزم بطاقة تذكرتي Fan ID مفعلة لموسم 2024/2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fan ID Quick Check & Real-Time Booking Steps Hub -->
+      <section class="max-w-7xl mx-auto w-full px-4 sm:px-8 -mt-6 sm:-mt-10 relative z-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Fan ID Verification Quick Widget (5 cols) -->
+          <div class="lg:col-span-5 bg-surface-container-high p-6 rounded-3xl shadow-xl flex flex-col justify-between gap-5 border border-white/10">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-2xl">fingerprint</span>
+                </div>
+                <div class="flex flex-col">
+                  <h4 class="font-bold text-base text-on-surface">فحص بطاقة تذكرتي Fan ID</h4>
+                  <span class="text-xs text-on-surface-variant">تحقق من تفعيل حسابك لموسم 2024/2025</span>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 bg-surface-container rounded-full text-primary font-bold text-xs">فوري</span>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              <label class="text-on-surface text-xs font-semibold">رقم المشجع أو الرقم القومي (14 رقم)</label>
+              <div class="flex gap-2">
+                <input class="w-full bg-surface-container-lowest text-on-surface px-4 py-3 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline border border-white/5 transition-all" id="fanIdInput" placeholder="EG-XXXXXXXX أو الرقم القومي" type="text"/>
+                <button class="px-5 py-3 rounded-xl bg-surface-container-highest hover:bg-primary hover:text-surface text-on-surface font-bold text-xs transition-all flex items-center gap-1.5 shrink-0" onclick="checkFanId()">
+                  <span class="material-symbols-outlined text-lg">search</span>
+                  <span>تحقق</span>
+                </button>
+              </div>
+              <div class="hidden items-center gap-2 p-3 rounded-xl bg-surface-container-low text-xs border border-white/5" id="fanIdFeedback">
+                <!-- Injected via script -->
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs text-on-surface-variant pt-2 border-t border-white/5">
+              <span>ليس لديك بطاقة مشجع حتى الآن؟</span>
+              <a class="text-primary font-bold hover:underline flex items-center gap-1" href="fan-id.html">
+                <span>تسجيل Fan ID جديد</span>
+                <span class="material-symbols-outlined text-sm rtl:rotate-180">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3-Step Express Journey Banner (7 cols) -->
+          <div class="lg:col-span-7 bg-surface-container-low p-6 rounded-3xl shadow-xl flex flex-col justify-between gap-6 border border-white/5">
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col">
+                <span class="text-primary font-bold text-xs uppercase tracking-wider">خطوات الحجز الرسمية</span>
+                <h4 class="font-bold text-base text-on-surface">كيف تحجز تذكرتك في ٣ خطوات بسيطة؟</h4>
+              </div>
+              <span class="text-on-surface-variant text-xs">منظومة رابطة الأندية المصرية</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Step 1 -->
+              <div class="bg-surface-container p-4 rounded-2xl flex flex-col gap-3 border border-white/5">
+                <div class="flex items-center justify-between">
+                  <span class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline font-bold text-base">١</span>
+                  <span class="material-symbols-outlined text-on-surface-variant text-xl">stadium</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="font-bold text-xs text-on-surface">اختر المباراة والمدرج</span>
+                  <span class="text-xs text-on-surface-variant leading-relaxed">حدد مقعدك عبر الخريطة التفاعلية للاستاد ومسار البوابات.</span>
+                </div>
+              </div>
+              <!-- Step 2 -->
+              <div class="bg-surface-container p-4 rounded-2xl flex flex-col gap-3 border border-white/5">
+                <div class="flex items-center justify-between">
+                  <span class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline font-bold text-base">٢</span>
+                  <span class="material-symbols-outlined text-on-surface-variant text-xl">badge</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="font-bold text-xs text-on-surface">تأكيد بطاقة Fan ID</span>
+                  <span class="text-xs text-on-surface-variant leading-relaxed">ربط التذكرة بهويتك لمنع السوق السوداء وفق اللوائح.</span>
+                </div>
+              </div>
+              <!-- Step 3 -->
+              <div class="bg-surface-container p-4 rounded-2xl flex flex-col gap-3 border border-white/5">
+                <div class="flex items-center justify-between">
+                  <span class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline font-bold text-base">٣</span>
+                  <span class="material-symbols-outlined text-secondary text-xl">qr_code_scanner</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="font-bold text-xs text-on-surface">الدفع واستلام الباركود</span>
+                  <span class="text-xs text-on-surface-variant leading-relaxed">سداد فوري عبر فوري، المحافظ، وميزة والحصول على الرمز.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-3 bg-surface-container/40 p-3 rounded-xl text-xs text-on-surface-variant">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-base">verified_user</span>
+                <span>بوابات إلكترونية ذكية تقرأ التذكرة عبر شاشة هاتفك مباشرة بدون طباعة ورقية</span>
+              </div>
+              <span class="text-secondary font-bold">دخول سلس وسريع</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Fixtures Section with Filters -->
+      <section class="max-w-7xl mx-auto w-full px-4 sm:px-8 py-14 flex flex-col gap-8">
+        <!-- Header & Club Filter Chips -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+              <span class="text-primary font-bold text-xs">دوري نايل 2024 / 2025</span>
+            </div>
+            <h2 class="font-headline font-bold text-3xl text-on-surface">جدول مباريات الجولة وحجز التذاكر</h2>
+            <p class="text-on-surface-variant text-sm">اختر مواجهتك المفضلة، وتحقق من توفر المقاعد في استادات مصر المعتمدة</p>
+          </div>
+          <!-- Quick Nav Link -->
+          <a class="flex items-center gap-1.5 text-primary font-bold text-sm hover:underline self-start md:self-auto" href="fixtures.html">
+            <span>عرض كافة مباريات الموسم (34 جولة)</span>
+            <span class="material-symbols-outlined text-lg rtl:rotate-180">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Club Filter Bar -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="clubFilterBar">
+          <button class="px-4 py-2 rounded-xl bg-primary text-surface font-bold text-xs shrink-0 shadow-sm">جميع المباريات</button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-xs shrink-0">الأهلي</button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-xs shrink-0">الزمالك</button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-xs shrink-0">بيراميدز</button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-xs shrink-0">الاتحاد السكندري</button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-xs shrink-0">المصري البورسعيدي</button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-xs shrink-0">الإسماعيلي</button>
+        </div>
+
+        <!-- Match Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Fixture 1: Pyramids vs Ismaily -->
+          <div class="bg-surface-container-low hover:bg-surface-container transition-all duration-300 rounded-3xl p-6 flex flex-col justify-between gap-6 shadow-md hover:-translate-y-1 border border-white/5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-xs text-primary font-bold">متاح الآن للحجز</span>
+              </div>
+              <span class="text-on-surface-variant text-xs bg-surface-container px-2.5 py-1 rounded-full">الجولة 15</span>
+            </div>
+            
+            <div class="flex items-center justify-between py-2">
+              <div class="flex flex-col items-center gap-2 w-5/12 text-center">
+                <div class="w-16 h-16 rounded-2xl bg-surface-container-high p-2 flex items-center justify-center shadow border border-white/5">
+                  <img class="w-full h-full object-contain" alt="Pyramids FC" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABfchK_LLstw3MOKVUlL8QqrxrlpqcaTqXiQoMtd-kw5kNLDLCFgrcKrWiNVe6J1d-JLu82Xwsf19VHFFm7DPnc9Jul2WaaqCQXuDNG-svv3DAfPE_klN-nbgRlWT1ZhVCGqpsAd3W1GDEGtGCWLqPR6phmhPkXhxahF8DdoBwDwzhLrR6s0u1sH7ab0qk7fEKabJE9XbVE7fxA7Gm-FIJlEMb82734HDEBc3SH5nPfzH_TUwUl_Ar3Q"/>
+                </div>
+                <span class="font-bold text-sm text-on-surface">بيراميدز</span>
+                <span class="text-on-surface-variant text-[11px]">الدفاع الجوي</span>
+              </div>
+
+              <div class="flex flex-col items-center justify-center w-2/12">
+                <span class="font-headline font-bold text-base text-outline">VS</span>
+                <span class="text-xs text-secondary bg-surface-container-highest px-2 py-0.5 rounded mt-1 font-mono">17:00</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 w-5/12 text-center">
+                <div class="w-16 h-16 rounded-2xl bg-surface-container-high p-2 flex items-center justify-center shadow border border-white/5">
+                  <img class="w-full h-full object-contain" alt="Ismaily SC" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WeQBC75QbS8KLTTtRPaAGnMnZV9VCSA8lth-34gaHdiG_OjVTiN7s1e_6nOfR1bmB2-tSFPXYgOCVsSavD7N1rLF1lKOBrg20yCB74zQvZ8Q7fywcasyHhH20M1DJYCeOLDwdPluFpLzRTUREm-GxFY3RSFJdzj0Ft50GyCkIfWObYy8AncJPpdDzCDL6FO8-F2BrvmkCKpaKoiGpHe51wNAPUTbBCQ_aMzaYmgvokfJkU0qPhol9w"/>
+                </div>
+                <span class="font-bold text-sm text-on-surface">الإسماعيلي</span>
+                <span class="text-on-surface-variant text-[11px]">برازيل مصر</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container/60 p-3 rounded-2xl flex flex-col gap-2 text-xs text-on-surface-variant">
+              <div class="flex items-center justify-between">
+                <span class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-sm text-primary">stadium</span>
+                  استاد الدفاع الجوي
+                </span>
+                <span class="text-on-surface font-semibold">السبت 15 مارس</span>
+              </div>
+              <div class="flex items-center justify-between text-[11px]">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-xs text-tertiary">live_tv</span>
+                  ON Time Sports 2
+                </span>
+                <span class="text-primary font-bold">بوابات الدخول 01:00 م</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-white/5">
+              <div class="flex flex-col">
+                <span class="text-on-surface-variant text-[11px]">السعر يبدأ من</span>
+                <span class="font-bold text-base text-on-surface">75 ج.م</span>
+              </div>
+              <a class="px-5 py-2.5 rounded-xl bg-primary text-surface font-bold text-xs hover:bg-[#6ffbbe] transition-colors flex items-center gap-1 shadow-[0_0_12px_rgba(78,222,163,0.2)]" href="booking.html?match=pyramids-ismaily">
+                <span>حجز التذكرة</span>
+                <span class="material-symbols-outlined text-base rtl:rotate-180">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Fixture 2: Al Masry vs Smouha -->
+          <div class="bg-surface-container-low hover:bg-surface-container transition-all duration-300 rounded-3xl p-6 flex flex-col justify-between gap-6 shadow-md hover:-translate-y-1 border border-white/5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-xs text-primary font-bold">متاح للحجز</span>
+              </div>
+              <span class="text-on-surface-variant text-xs bg-surface-container px-2.5 py-1 rounded-full">الجولة 15</span>
+            </div>
+
+            <div class="flex items-center justify-between py-2">
+              <div class="flex flex-col items-center gap-2 w-5/12 text-center">
+                <div class="w-16 h-16 rounded-2xl bg-surface-container-high p-2 flex items-center justify-center shadow border border-white/5">
+                  <img class="w-full h-full object-contain" alt="Al Masry SC" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgnaAKApXI9R722n5HeH1JxSCZZA4Oc5LAJGziOJuUZ4QfpVKDeC-rMxSICkEdB8GOJAHPlnZjO0yLabpN6AE3A8QXPHcZtTTzucqDkJekxoG5W-DgttvSYIICLSTI8KlCQb0f82-kdbpQhZXq2AlIvUfKQg08gEKvPBYdW5nG3DDqd9LesaAgO8iOZ4BDn6PTVM2w59OPJ1yyqPdjxxgpRYKCJMPGZojW8_eXADPsAEYtA43VJDMaCg"/>
+                </div>
+                <span class="font-bold text-sm text-on-surface">المصري</span>
+                <span class="text-on-surface-variant text-[11px]">النسور الخضر</span>
+              </div>
+
+              <div class="flex flex-col items-center justify-center w-2/12">
+                <span class="font-headline font-bold text-base text-outline">VS</span>
+                <span class="text-xs text-secondary bg-surface-container-highest px-2 py-0.5 rounded mt-1 font-mono">20:00</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 w-5/12 text-center">
+                <div class="w-16 h-16 rounded-2xl bg-surface-container-high p-2 flex items-center justify-center shadow border border-white/5">
+                  <img class="w-full h-full object-contain" alt="Smouha SC" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3JsNjd81yaO1-1PNOvCdzsDhpLIeF7HW_G0LQOxaz3iGaYznau2UwEKE3Ux7-igEfkFbUtyYVF5zjqJVWFW7WM66VwbxJZYgRYuak6zeTh1_2-VEVRQq113mmLoDXUgFw1jYQ_R8_5VS3JooKaSCxJ2j01NK8vzbYbA030_E_KQis6yJRFK-W35QkmHkPuJ7i6jZ5SBpvaFQuRmKlTWOyUjx6HeH6ooEJIFdMlRk0inBdW1hvKEjjw"/>
+                </div>
+                <span class="font-bold text-sm text-on-surface">سموحة</span>
+                <span class="text-on-surface-variant text-[11px]">الموج الأزرق</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container/60 p-3 rounded-2xl flex flex-col gap-2 text-xs text-on-surface-variant">
+              <div class="flex items-center justify-between">
+                <span class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-sm text-primary">stadium</span>
+                  استاد برج العرب
+                </span>
+                <span class="text-on-surface font-semibold">السبت 15 مارس</span>
+              </div>
+              <div class="flex items-center justify-between text-[11px]">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-xs text-tertiary">live_tv</span>
+                  ON Time Sports 1
+                </span>
+                <span class="text-primary font-bold">بوابات الدخول 04:00 م</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-white/5">
+              <div class="flex flex-col">
+                <span class="text-on-surface-variant text-[11px]">السعر يبدأ من</span>
+                <span class="font-bold text-base text-on-surface">75 ج.م</span>
+              </div>
+              <a class="px-5 py-2.5 rounded-xl bg-primary text-surface font-bold text-xs hover:bg-[#6ffbbe] transition-colors flex items-center gap-1 shadow-[0_0_12px_rgba(78,222,163,0.2)]" href="booking.html?match=masry-smouha">
+                <span>حجز التذكرة</span>
+                <span class="material-symbols-outlined text-base rtl:rotate-180">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Fixture 3: Al Ittihad vs ZED FC -->
+          <div class="bg-surface-container-low hover:bg-surface-container transition-all duration-300 rounded-3xl p-6 flex flex-col justify-between gap-6 shadow-md hover:-translate-y-1 border border-white/5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                <span class="text-xs text-secondary font-bold">أوشك على النفاد (8% متبقي)</span>
+              </div>
+              <span class="text-on-surface-variant text-xs bg-surface-container px-2.5 py-1 rounded-full">الجولة 15</span>
+            </div>
+
+            <div class="flex items-center justify-between py-2">
+              <div class="flex flex-col items-center gap-2 w-5/12 text-center">
+                <div class="w-16 h-16 rounded-2xl bg-surface-container-high p-2 flex items-center justify-center shadow border border-white/5">
+                  <img class="w-full h-full object-contain" alt="Al Ittihad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB96y4MGpSBoQV3w9yK5gTVhRpagAK7FWJvWF_7bXK8rZbbvR4CSoAiWRxS1YvFUI59pUhNApmZXd624-_YhEnUEbnbZlsUpjT2LV4nLUO6wcfnFQ9080iMdfj4Cnl7rkD-dAMCOQd76dI2bz-pJ5J2ChJHoutARmNGgqyvpzl742AXPBq3Lt1RrMYzIctXZ-wiPhN823eoYXN6dh1BJTdtdIATGD5kEmN3HtDLMM90sCpGjts4sgD8bw"/>
+                </div>
+                <span class="font-bold text-sm text-on-surface">سيد البلد</span>
+                <span class="text-on-surface-variant text-[11px]">الاتحاد السكندري</span>
+              </div>
+
+              <div class="flex flex-col items-center justify-center w-2/12">
+                <span class="font-headline font-bold text-base text-outline">VS</span>
+                <span class="text-xs text-secondary bg-surface-container-highest px-2 py-0.5 rounded mt-1 font-mono">19:00</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 w-5/12 text-center">
+                <div class="w-16 h-16 rounded-2xl bg-surface-container-high p-2 flex items-center justify-center shadow border border-white/5">
+                  <img class="w-full h-full object-contain" alt="ZED FC" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ2pfT1Sj6XQ6GC8VAWkA7ipy_ScVaDWv6A90TKYG-JwFSqtxk1PvtepD_BiBUn49VU_Euc8-tJHTM9bRsgsJLq2QDG65ZYxm93nN5JAUOKMoGGWCKDesRnl5IJwFkG_Hi_5g1NHugO-Wy4uz5N6YtGR1ZMpsQoAc5ixQT341aPgW1-NJEz-7YA_Cjau0sMUq7Q__MRmoa9XWtaGhNjc83uRiLjN81Cly8gbowEuwIOLyTQKZ01n332Q"/>
+                </div>
+                <span class="font-bold text-sm text-on-surface">زد إف سي</span>
+                <span class="text-on-surface-variant text-[11px]">ZED FC</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container/60 p-3 rounded-2xl flex flex-col gap-2 text-xs text-on-surface-variant">
+              <div class="flex items-center justify-between">
+                <span class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-sm text-primary">stadium</span>
+                  استاد الإسكندرية
+                </span>
+                <span class="text-on-surface font-semibold">الأحد 16 مارس</span>
+              </div>
+              <div class="flex items-center justify-between text-[11px]">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-xs text-tertiary">live_tv</span>
+                  ON Time Sports 2
+                </span>
+                <span class="text-secondary font-bold">المقصورة الرئيسية نفدت</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-white/5">
+              <div class="flex flex-col">
+                <span class="text-on-surface-variant text-[11px]">السعر يبدأ من</span>
+                <span class="font-bold text-base text-on-surface">75 ج.م</span>
+              </div>
+              <a class="px-5 py-2.5 rounded-xl bg-secondary text-surface font-bold text-xs hover:bg-[#ffddb8] transition-colors flex items-center gap-1 shadow-[0_0_12px_rgba(255,185,95,0.2)]" href="booking.html?match=ittihad-zed">
+                <span>سارع بالحجز</span>
+                <span class="material-symbols-outlined text-base rtl:rotate-180">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stadium Seating Map Teaser Section -->
+      <section class="w-full bg-surface-container-lowest px-4 sm:px-8 py-14 border-y border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+          <!-- Visual Stadium Diagram -->
+          <div class="w-full lg:w-1/2 bg-surface-container p-6 rounded-3xl flex flex-col gap-4 shadow-xl border border-white/5">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-bold text-sm text-on-surface flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">analytics</span>
+                مخطط توزيع جماهير قمة القاهرة
+              </span>
+              <span class="text-primary font-bold">استاد القاهرة الدولي</span>
+            </div>
+
+            <!-- Pitch SVG graphic -->
+            <div class="relative w-full aspect-[16/10] bg-surface-container-high rounded-2xl overflow-hidden flex items-center justify-center p-4">
+              <svg class="w-full h-full text-primary" fill="none" viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
+                <rect fill="#0d131f" height="300" rx="20" stroke="#10b981" stroke-opacity="0.3" stroke-width="2" width="420" x="90" y="40"></rect>
+                <rect fill="#091b15" height="260" rx="6" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5" width="360" x="120" y="60"></rect>
+                <line stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5" x1="300" x2="300" y1="60" y2="320"></line>
+                <circle cx="300" cy="190" r="45" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5"></circle>
+                <circle cx="300" cy="190" fill="#10b981" r="3"></circle>
+                <rect height="150" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5" width="70" x="120" y="115"></rect>
+                <rect height="150" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5" width="70" x="410" y="115"></rect>
+                <!-- North Stand (Al Ahly) -->
+                <a href="booking.html"><path class="hover:fill-opacity-50 transition-all cursor-pointer" d="M120 45 L480 45 L450 15 L150 15 Z" fill="#ef4444" fill-opacity="0.25"></path></a>
+                <text fill="#ffb4ab" font-size="11" font-weight="bold" text-anchor="middle" x="300" y="34">مدرجات الأهلي - الدرجة الثالثة شمال (اضغط للاختيار)</text>
+                <!-- South Stand (Zamalek) -->
+                <a href="booking.html"><path class="hover:fill-opacity-50 transition-all cursor-pointer" d="M120 335 L480 335 L450 365 L150 365 Z" fill="#3b82f6" fill-opacity="0.25"></path></a>
+                <text fill="#acedff" font-size="11" font-weight="bold" text-anchor="middle" x="300" y="354">مدرجات الزمالك - الدرجة الثالثة يمين (متبقي 650 تذكرة)</text>
+                <!-- West VIP -->
+                <a href="booking.html"><path class="hover:fill-opacity-60 transition-all cursor-pointer" d="M495 70 L525 70 L525 310 L495 310 Z" fill="#10b981" fill-opacity="0.3"></path></a>
+                <text fill="#4edea3" font-size="10" font-weight="bold" text-anchor="middle" transform="rotate(90 510 195)" x="510" y="195">المقصورة والممتازة</text>
+                <!-- East Stand -->
+                <a href="booking.html"><path class="hover:fill-opacity-60 transition-all cursor-pointer" d="M75 70 L105 70 L105 310 L75 310 Z" fill="#ffb95f" fill-opacity="0.3"></path></a>
+                <text fill="#ffb95f" font-size="10" font-weight="bold" text-anchor="middle" transform="rotate(-90 90 195)" x="90" y="195">الدرجة الأولى والثانية</text>
+              </svg>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 text-center text-xs">
+              <div class="flex items-center justify-center gap-1.5 bg-surface-container-high p-2 rounded-xl text-on-surface">
+                <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                <span>الدرجة الأولى (250 ج.م)</span>
+              </div>
+              <div class="flex items-center justify-center gap-1.5 bg-surface-container-high p-2 rounded-xl text-on-surface">
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                <span>الدرجة الثانية (150 ج.م)</span>
+              </div>
+              <div class="flex items-center justify-center gap-1.5 bg-surface-container-high p-2 rounded-xl text-on-surface">
+                <span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+                <span>الدرجة الثالثة (75 ج.م)</span>
+              </div>
+              <div class="flex items-center justify-center gap-1.5 bg-surface-container-high p-2 rounded-xl text-on-surface">
+                <span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+                <span>المقصورة VIP (1,000 ج.م)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Explanatory Stand Info -->
+          <div class="w-full lg:w-1/2 flex flex-col gap-6">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-xl">map</span>
+              <span class="text-primary font-bold text-xs">نظام البوابات الذكية الموحد</span>
+            </div>
+            <h3 class="font-headline font-bold text-3xl text-on-surface">
+              تعرف على بوابتك ومقعدك قبل الوصول إلى أرض الملعب
+            </h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              تضمن منظومة تذكرتي للدوري المصري تخصيص المقاعد بدقة فائقة لمنع التكدس عند المداخل. كل تذكرة رقمية صادرة تحتوي على رقم البوابة الإلكترونية ومسار الدخول المحدد باللون لتسهيل وصولك في دقائق معدودة.
+            </p>
+
+            <div class="flex flex-col gap-3 text-xs text-on-surface">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                <span>بوابات منفصلة تماماً لجماهير الفريق المضيف والفريق الضيف لتأمين تام</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                <span>أماكن مخصصة وميسرة لأصحاب الهمم وكبار السن بالمقصورة الرئيسية</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                <span>إرشاد صوتي وتوجيه مكاني عبر الهاتف فور الاقتراب من محيط الاستاد</span>
+              </div>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center gap-4">
+              <a class="px-6 py-3.5 rounded-2xl bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-bold text-xs flex items-center gap-2 border border-white/5" href="booking.html">
+                <span class="material-symbols-outlined text-lg">explore</span>
+                <span>فتح خريطة المقاعد التفاعلية وحجز تذكرتك</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Egyptian Trusted Payment Infrastructure Showcase -->
+      <section class="max-w-7xl mx-auto w-full px-4 sm:px-8 py-12 flex flex-col gap-8">
+        <div class="flex flex-col items-center text-center gap-2 max-w-2xl mx-auto">
+          <span class="text-primary font-bold text-xs">دفع رقمي آمن 100%</span>
+          <h3 class="font-headline font-bold text-2xl text-on-surface">قنوات الدفع المصرية المعتمدة فورياً</h3>
+          <p class="text-on-surface-variant text-xs">اختر وسيلة الدفع الأنسب لك؛ سيتم تأكيد حجز تذكرتك وإصدار الباركود التفاعلي فور سداد القيمة خلال مهلة الحجز المحددة.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <!-- Fawry -->
+          <div class="bg-surface-container-low p-5 rounded-2xl flex flex-col items-center text-center gap-3 hover:bg-surface-container transition-colors border border-white/5">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary">
+              <span class="material-symbols-outlined text-2xl">point_of_sale</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-xs text-on-surface">فوري Fawry</span>
+              <span class="text-on-surface-variant text-[10px]">كود دفع فوري</span>
+            </div>
+          </div>
+
+          <!-- Mobile Wallets -->
+          <div class="bg-surface-container-low p-5 rounded-2xl flex flex-col items-center text-center gap-3 hover:bg-surface-container transition-colors border border-white/5">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-error">
+              <span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-xs text-on-surface">المحافظ الذكية</span>
+              <span class="text-on-surface-variant text-[10px]">فودافون كاش، أورنج، وي</span>
+            </div>
+          </div>
+
+          <!-- InstaPay -->
+          <div class="bg-surface-container-low p-5 rounded-2xl flex flex-col items-center text-center gap-3 hover:bg-surface-container transition-colors border border-white/5">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined text-2xl">bolt</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-xs text-on-surface">إنستاباي InstaPay</span>
+              <span class="text-on-surface-variant text-[10px]">تحويل لحظي مباشر</span>
+            </div>
+          </div>
+
+          <!-- Meeza -->
+          <div class="bg-surface-container-low p-5 rounded-2xl flex flex-col items-center text-center gap-3 hover:bg-surface-container transition-colors border border-white/5">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary">
+              <span class="material-symbols-outlined text-2xl">credit_card</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-xs text-on-surface">بطاقات ميزة Meeza</span>
+              <span class="text-on-surface-variant text-[10px]">المدفوعات الوطنية</span>
+            </div>
+          </div>
+
+          <!-- Visa & Mastercard -->
+          <div class="bg-surface-container-low p-5 rounded-2xl flex flex-col items-center text-center gap-3 hover:bg-surface-container transition-colors border border-white/5 col-span-2 md:col-span-1">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface">
+              <span class="material-symbols-outlined text-2xl">lock</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-xs text-on-surface">Visa & Mastercard</span>
+              <span class="text-on-surface-variant text-[10px]">حماية 3D Secure</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fan ID Helpdesk & Regulations Callout -->
+      <section class="max-w-7xl mx-auto w-full px-4 sm:px-8 pb-12">
+        <div class="bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl border border-white/10">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+              <span class="material-symbols-outlined text-3xl">headset_mic</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="font-bold text-base text-on-surface">هل واجهت مشكلة في التحقق من بطاقة تذكرتي أو السداد؟</h4>
+              <p class="text-xs text-on-surface-variant">فريق الدعم الفني جاهز على مدار 24 ساعة للرد على استفسارات المشجعين وتحديث البيانات المرفقة.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a class="px-5 py-3 rounded-xl bg-surface-container-lowest text-on-surface hover:text-primary transition-colors font-bold text-xs flex items-center gap-2 border border-white/5" href="tel:15355">
+              <span class="material-symbols-outlined text-primary text-lg">call</span>
+              <span>اتصل على 15355</span>
+            </a>
+            <a class="px-5 py-3 rounded-xl bg-primary text-surface font-bold text-xs hover:bg-[#6ffbbe] transition-colors flex items-center gap-2" href="fan-id.html">
+              <span>مركز المساعدة والتحقق</span>
+              <span class="material-symbols-outlined text-lg rtl:rotate-180">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="w-full bg-surface-container-lowest text-on-surface-variant border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 flex flex-col gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="flex flex-col gap-3 md:col-span-1">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-2xl">stadium</span>
+            <span class="font-headline font-bold text-lg text-on-surface">تذكرتي الدوري المصري</span>
+          </div>
+          <p class="text-xs text-on-surface-variant leading-relaxed">
+            بوابتك الرقمية لحضور قمم الدوري المصري الممتاز. تذاكر رقمية مشفرة، ربط مباشر ببطاقة المشجع، وأمان تام لمدرجات كرة القدم المصرية.
+          </p>
+          <div class="flex items-center gap-2 text-primary font-bold text-xs">
+            <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+            <a href="tel:15355" class="hover:underline">خدمة المشجعين على مدار الساعة: 15355</a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <span class="font-bold text-sm text-on-surface">الروابط السريعة</span>
+          <div class="flex flex-col gap-2 text-xs">
+            <a class="hover:text-primary transition-colors" href="fixtures.html">جدول الجولة القادمة</a>
+            <a class="hover:text-primary transition-colors" href="fan-id.html">التحقق من بطاقة المشجع</a>
+            <a class="hover:text-primary transition-colors" href="booking.html">خريطة استاد القاهرة والمقاعد</a>
+            <a class="hover:text-primary transition-colors" href="tickets.html">محفظة التذاكر الإلكترونية</a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <span class="font-bold text-sm text-on-surface">إرشادات الدخول والتنظيم</span>
+          <div class="flex flex-col gap-1.5 text-xs text-on-surface-variant">
+            <span>• فتح البوابات قبل انطلاق المباراة بـ ٤ ساعات</span>
+            <span>• إلزامية إبراز بطاقة المشجع والرقم القومي</span>
+            <span>• حظر نقل التذاكر أو إعادة بيعها خارج المنظومة</span>
+            <span>• تطبيق لوائح الانضباط الصارمة برابطة الأندية</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <span class="font-bold text-sm text-on-surface">طرق الدفع المصرية المعتمدة</span>
+          <div class="grid grid-cols-2 gap-2 text-xs font-semibold">
+            <div class="bg-surface-container p-2 rounded-lg flex items-center justify-center text-on-surface border border-white/5">فوري Fawry</div>
+            <div class="bg-surface-container p-2 rounded-lg flex items-center justify-center text-on-surface border border-white/5">فودافون كاش</div>
+            <div class="bg-surface-container p-2 rounded-lg flex items-center justify-center text-on-surface border border-white/5">إنستاباي InstaPay</div>
+            <div class="bg-surface-container p-2 rounded-lg flex items-center justify-center text-on-surface border border-white/5">ميزة Meeza</div>
+            <div class="bg-surface-container p-2 rounded-lg flex items-center justify-center text-on-surface col-span-2 border border-white/5">Visa & Mastercard</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-surface-container-low p-4 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 text-xs border border-white/5">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-xl">gavel</span>
+          <span class="text-on-surface">تنبيه قانوني: التذاكر مخصصة للأفراد المرتبطين برقم المشجع. يُعاقب القانون رقم ٧١ لسنة ٢٠١٧ على تداول التذاكر بالسوق السوداء.</span>
+        </div>
+        <div class="flex items-center gap-4 text-on-surface-variant text-xs">
+          <span class="text-primary font-bold">EPL • الاتحاد المصري لكرة القدم</span>
+          <span>رابطة الأندية المحترفة</span>
+        </div>
+      </div>
+
+      <div class="text-center text-xs text-outline pt-2">
+        جميع الحقوق محفوظة © 2025 تذاكر الدوري المصري الممتاز - منظومة بطاقة المشجع الموحدة
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    // Live Countdown
+    (function initCountdown() {
+      let seconds = 10, minutes = 32, hours = 14, days = 2;
+      const secEl = document.getElementById('timerSecs');
+      const minEl = document.getElementById('timerMins');
+      const hrEl = document.getElementById('timerHours');
+      const dayEl = document.getElementById('timerDays');
+
+      if (!secEl) return;
+      setInterval(() => {
+        if (seconds > 0) {
+          seconds--;
+        } else {
+          seconds = 59;
+          if (minutes > 0) minutes--;
+          else {
+            minutes = 59;
+            if (hours > 0) hours--;
+            else {
+              hours = 23;
+              if (days > 0) days--;
+            }
+          }
+        }
+        secEl.textContent = String(seconds).padStart(2, '0');
+        minEl.textContent = String(minutes).padStart(2, '0');
+        hrEl.textContent = String(hours).padStart(2, '0');
+        dayEl.textContent = String(days).padStart(2, '0');
+      }, 1000);
+    })();
+
+    // Fan ID Instant Quick Verification
+    function checkFanId() {
+      const input = document.getElementById('fanIdInput');
+      const feedback = document.getElementById('fanIdFeedback');
+      if (!input || !feedback) return;
+
+      const val = input.value.trim();
+      feedback.classList.remove('hidden', 'flex', 'text-error', 'text-primary');
+
+      if (!val) {
+        feedback.classList.add('flex', 'text-error');
+        feedback.innerHTML = '<span class="material-symbols-outlined text-sm">warning</span><span>برجاء إدخال رقم بطاقة المشجع Fan ID أو الرقم القومي المكون من 14 رقماً.</span>';
+        return;
+      }
+
+      feedback.classList.add('flex', 'text-primary');
+      feedback.innerHTML = '<span class="material-symbols-outlined text-sm">check_circle</span><span>بطاقة مشجع معتمدة ومفعلة لموسم 2024/2025. يمكنك التوجه لحجز التذاكر مباشرة! <a href="booking.html" class="underline font-bold mr-1">احجز الآن</a></span>';
+      showToast('تم التحقق من بيانات بطاقة المشجع بنجاح', 'success');
+    }
+
+    // Filter Buttons Switcher
+    const filterButtons = document.querySelectorAll('#clubFilterBar button');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.className = 'px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-xs shrink-0';
+        });
+        btn.className = 'px-4 py-2 rounded-xl bg-primary text-surface font-bold text-xs shrink-0 shadow-sm';
+        showToast(`تم تطبيق فلتر: ${btn.textContent.trim()}`, 'info');
+      });
+    });
+  </script>
+</body>
+</html>
