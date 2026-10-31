@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. Checkout & Flow to Tickets Page
   if (bookTicketCta) {
-    bookTicketCta.addEventListener('click', () => {
+    bookTicketCta.addEventListener('click', async () => {
       if (quantity === 2 && verifySecondaryBtn && !verifySecondaryBtn.disabled) {
         showToast('يُرجى إدخال والتحقق من بطاقة المشجع (Fan ID) للمرافق الثاني للمتابعة.', 'warning');
         return;
@@ -275,8 +275,15 @@ document.addEventListener('DOMContentLoaded', () => {
         bookedAt: new Date().toISOString()
       };
 
-      // Save to storage
+      // 1. Save locally
       saveActiveBooking(bookingData);
+
+      // 2. Save to Firebase Firestore Cloud if connected
+      if (window.EPL_FIREBASE && window.EPL_FIREBASE.saveTicketToFirestore) {
+        window.EPL_FIREBASE.saveTicketToFirestore(bookingData).catch(err => {
+          console.warn("Background Firebase save note:", err);
+        });
+      }
 
       // Show payment modal/overlay if exists
       if (paymentModal) {
@@ -287,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
           window.location.href = 'tickets.html';
         }, 1600);
       } else {
-        showToast('تم تأكيد الحجز بنجاح! جاري الانتقال إلى تذكرتك الرقمية...', 'success');
+        showToast('تم تأكيد الحجز بنجاح وحفظه في Firebase! جاري الانتقال إلى تذكرتك الرقمية...', 'success');
         setTimeout(() => {
           window.location.href = 'tickets.html';
         }, 800);

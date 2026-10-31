@@ -96,6 +96,10 @@
           <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="fan-id.html">حجز تذكرتي بالرقم القومي</a>
           <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="booking.html">الاستادات والمقاعد</a>
           <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="tickets.html">تذاكري المحجوزة</a>
+          <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center gap-1 font-bold" href="dashboard.html">
+            <span class="material-symbols-outlined text-base">dashboard</span>
+            <span>لوحة التحكم</span>
+          </a>
         </nav>
       </div>
 
@@ -194,6 +198,10 @@
         <a class="px-4 py-3 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-3" href="tickets.html">
           <span class="material-symbols-outlined text-lg">confirmation_number</span>
           <span>تذاكري المحجوزة</span>
+        </a>
+        <a class="px-4 py-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center gap-3 font-bold" href="dashboard.html">
+          <span class="material-symbols-outlined text-lg">dashboard</span>
+          <span>لوحة التحكم</span>
         </a>
       </nav>
     </div>
@@ -979,6 +987,7 @@
   </footer>
 
   <!-- Scripts -->
+  <script type="module" src="js/firebase.js"></script>
   <script src="js/main.js"></script>
   <script>
     // Live Countdown
@@ -1027,9 +1036,14 @@
         return;
       }
 
+      // Log verification event to Firebase
+      if (window.EPL_FIREBASE && window.EPL_FIREBASE.logEvent) {
+        window.EPL_FIREBASE.logEvent('fan_id_lookup', { fan_id: val });
+      }
+
       feedback.classList.add('flex', 'text-primary');
       feedback.innerHTML = '<span class="material-symbols-outlined text-sm">check_circle</span><span>بطاقة مشجع معتمدة ومفعلة لموسم 2024/2025. يمكنك التوجه لحجز التذاكر مباشرة! <a href="booking.html" class="underline font-bold mr-1">احجز الآن</a></span>';
-      showToast('تم التحقق من بيانات بطاقة المشجع بنجاح', 'success');
+      showToast('تم التحقق من بيانات بطاقة المشجع بنجاح عبر المنظومة', 'success');
     }
 
     // Filter Buttons Switcher

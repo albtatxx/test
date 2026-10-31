@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (fanIdVal && ticket.fanId) fanIdVal.textContent = ticket.fanId;
   if (matchTitleVal && ticket.matchTitle) matchTitleVal.textContent = ticket.matchTitle;
 
+  // Log view event in Firebase Analytics
+  if (window.EPL_FIREBASE && window.EPL_FIREBASE.logEvent) {
+    window.EPL_FIREBASE.logEvent('view_ticket', {
+      reference: ticket.reference,
+      match: ticket.matchTitle
+    });
+  }
+
   // 2. Real-Time Moving Security Pass Clock
   function updatePassClock() {
     const timestampEl = document.getElementById('liveTimestamp');
